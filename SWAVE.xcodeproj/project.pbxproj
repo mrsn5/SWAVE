@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		C321FAD422D0AD24009DB05A /* NewFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD322D0AD24009DB05A /* NewFeedVC.swift */; };
 		C321FAD622D0AD38009DB05A /* FeedInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */; };
 		C321FAD822D0B204009DB05A /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD722D0B204009DB05A /* InputTextView.swift */; };
+		C39AE5E822D3AF590075C224 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */; };
+		C39AE5EB22D3B25D0075C224 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EA22D3B25D0075C224 /* AuthService.swift */; };
+		C39AE5ED22D3B4480075C224 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EC22D3B4480075C224 /* DataService.swift */; };
+		C39AE5EF22D3DA560075C224 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EE22D3DA560075C224 /* SettingsVC.swift */; };
+		C39AE5F122D3DD570075C224 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5F022D3DD570075C224 /* AuthVC.swift */; };
 		C3A68B7322CFF2E9005F4F10 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7222CFF2E9005F4F10 /* RoundedImage.swift */; };
 		C3A68B7622CFF33D005F4F10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7522CFF33D005F4F10 /* Constants.swift */; };
 		C3A68B7822CFF526005F4F10 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7722CFF526005F4F10 /* FeedCell.swift */; };
@@ -38,6 +43,11 @@
 		C321FAD322D0AD24009DB05A /* NewFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedVC.swift; sourceTree = "<group>"; };
 		C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfoVC.swift; sourceTree = "<group>"; };
 		C321FAD722D0B204009DB05A /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C39AE5EA22D3B25D0075C224 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C39AE5EC22D3B4480075C224 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		C39AE5EE22D3DA560075C224 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		C39AE5F022D3DD570075C224 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		C3A68B7222CFF2E9005F4F10 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		C3A68B7522CFF33D005F4F10 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C3A68B7722CFF526005F4F10 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -68,7 +78,6 @@
 				7F31E9BC99301DCA0EB3014E /* Pods-SWAVE.debug.xcconfig */,
 				6274FFBA2B09EAC9CCCEB59B /* Pods-SWAVE.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +87,15 @@
 				4449571BFAF3498AA3CF8C30 /* Pods_SWAVE.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39AE5E922D3B2330075C224 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C39AE5EA22D3B25D0075C224 /* AuthService.swift */,
+				C39AE5EC22D3B4480075C224 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C3A68B7422CFF315005F4F10 /* Settings */ = {
@@ -110,13 +128,15 @@
 			isa = PBXGroup;
 			children = (
 				C3A68B7422CFF315005F4F10 /* Settings */,
-				C3A6D48922CF81CB00854FED /* Controllers */,
-				C3A6D48822CF81C500854FED /* Views */,
+				C39AE5E922D3B2330075C224 /* Services */,
 				C3A6D48722CF819C00854FED /* Models */,
+				C3A6D48822CF81C500854FED /* Views */,
+				C3A6D48922CF81CB00854FED /* Controllers */,
 				C3A6D47322CF7CA900854FED /* AppDelegate.swift */,
 				C3A6D47722CF7CA900854FED /* Main.storyboard */,
 				C3A6D47A22CF7CAB00854FED /* Assets.xcassets */,
 				C3A6D47C22CF7CAB00854FED /* LaunchScreen.storyboard */,
+				C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */,
 				C3A6D47F22CF7CAB00854FED /* Info.plist */,
 			);
 			path = SWAVE;
@@ -150,6 +170,8 @@
 				C321FAD122D0ACFB009DB05A /* ProfileVC.swift */,
 				C321FAD322D0AD24009DB05A /* NewFeedVC.swift */,
 				C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */,
+				C39AE5EE22D3DA560075C224 /* SettingsVC.swift */,
+				C39AE5F022D3DD570075C224 /* AuthVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A6D47E22CF7CAB00854FED /* LaunchScreen.storyboard in Resources */,
+				C39AE5E822D3AF590075C224 /* GoogleService-Info.plist in Resources */,
 				C3A6D47B22CF7CAB00854FED /* Assets.xcassets in Resources */,
 				C3A6D47922CF7CA900854FED /* Main.storyboard in Resources */,
 			);
@@ -274,14 +297,18 @@
 				C3A68B7622CFF33D005F4F10 /* Constants.swift in Sources */,
 				C321FACE22D0ACC9009DB05A /* RegisterVC.swift in Sources */,
 				C321FAD622D0AD38009DB05A /* FeedInfoVC.swift in Sources */,
+				C39AE5EF22D3DA560075C224 /* SettingsVC.swift in Sources */,
+				C39AE5F122D3DD570075C224 /* AuthVC.swift in Sources */,
 				C3A6D48B22CF821D00854FED /* PaddedTextField.swift in Sources */,
 				C321FACC22D0ACB4009DB05A /* LoginVC.swift in Sources */,
 				C3A68B7322CFF2E9005F4F10 /* RoundedImage.swift in Sources */,
 				C3A6D47422CF7CA900854FED /* AppDelegate.swift in Sources */,
+				C39AE5ED22D3B4480075C224 /* DataService.swift in Sources */,
 				C321FACA22D0A792009DB05A /* TopLabel.swift in Sources */,
 				C321FAD422D0AD24009DB05A /* NewFeedVC.swift in Sources */,
 				C321FAD822D0B204009DB05A /* InputTextView.swift in Sources */,
 				C3A68B7822CFF526005F4F10 /* FeedCell.swift in Sources */,
+				C39AE5EB22D3B25D0075C224 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
