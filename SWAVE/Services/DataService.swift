@@ -19,11 +19,28 @@ class DataService {
                 uData[key.rawValue] = value
             }
         }
-        
         Firestore.firestore().collection("users").document(uid).setData(uData) { (error) in
             if let error = error {
                 debugPrint("Error adding user: \(error)")
             }
         }
     }
+    
+    
+    func createFeedRecord(recordData: Dictionary<FEED_DATA, Any>,
+                          completion: @escaping (_ status: Bool, _ error: Error?) -> ()) {
+        var rData : Dictionary<String, Any> = [:]
+        for (key, value) in recordData {
+            rData[key.rawValue] = value
+        }
+        
+        Firestore.firestore().collection("feed").addDocument(data: rData) { (error) in
+            if let error = error {
+                completion(false, error)
+            } else {
+                completion(true, nil)
+            }
+        }
+    }
+    
 }
