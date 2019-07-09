@@ -38,30 +38,32 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func registerPressed(_ sender: Any) {
-        if usernameTF.text != nil && emailTF.text != nil && passwordTF.text != nil && repeatTF.text != nil && repeatTF.text == passwordTF.text {
+        
+        guard let username = usernameTF.text, let email = emailTF.text, let password = passwordTF.text, let repeatP = repeatTF.text else {return}
+        guard password == repeatP else {return}
+    
+        let userData = [USER_DATA.USERNAME: username,
+                        USER_DATA.EMAIL:    email,
+                        USER_DATA.PASSWORD: password]
+        AuthService.instance.registerUser(userData: userData) { (success, error) in
             
-            var userData = [USER_DATA.USERNAME: usernameTF.text!,
-                            USER_DATA.EMAIL:    emailTF.text!,
-                            USER_DATA.PASSWORD: passwordTF.text!]
-            AuthService.instance.registerUser(userData: userData) { (success, error) in
+            guard success else {
+                debugPrint("Error while registering new user: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            
+            AuthService.instance.loginUser(withEmail: email, andPassword: password, loginComplete: { (success, error) in
                 
                 guard success else {
                     debugPrint("Error while registering new user: \(String(describing: error?.localizedDescription))")
                     return
                 }
                 
-                AuthService.instance.loginUser(withEmail: self.emailTF.text!, andPassword: self.passwordTF.text!, loginComplete: { (success, error) in
-                    
-                    guard success else {
-                        debugPrint("Error while registering new user: \(String(describing: error?.localizedDescription))")
-                        return
-                    }
-                    
-                    self.performSegue(withIdentifier: "MainVC", sender: nil)
-                })
-                
-            }
+                self.performSegue(withIdentifier: "MainVC", sender: nil)
+            })
+            
         }
+        
     }
     
     func setRegisterBtn() {
