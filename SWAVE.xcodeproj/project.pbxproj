@@ -19,11 +19,11 @@
 		C327D9D122D63FA70083537B /* AdjustKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D022D63FA70083537B /* AdjustKeyboardView.swift */; };
 		C327D9D322D644280083537B /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D222D644280083537B /* KeyboardButton.swift */; };
 		C327D9D522D68D7B0083537B /* ReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D422D68D7B0083537B /* ReturnDelegate.swift */; };
-		C39AE5E822D3AF590075C224 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */; };
 		C39AE5EB22D3B25D0075C224 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EA22D3B25D0075C224 /* AuthService.swift */; };
 		C39AE5ED22D3B4480075C224 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EC22D3B4480075C224 /* DataService.swift */; };
 		C39AE5EF22D3DA560075C224 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EE22D3DA560075C224 /* SettingsVC.swift */; };
 		C39AE5F122D3DD570075C224 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5F022D3DD570075C224 /* AuthVC.swift */; };
+		C3A0A3CB22D759F8009D9258 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3A0A3CA22D759F7009D9258 /* GoogleService-Info.plist */; };
 		C3A68B7322CFF2E9005F4F10 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7222CFF2E9005F4F10 /* RoundedImage.swift */; };
 		C3A68B7622CFF33D005F4F10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7522CFF33D005F4F10 /* Constants.swift */; };
 		C3A68B7822CFF526005F4F10 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A68B7722CFF526005F4F10 /* FeedCell.swift */; };
@@ -49,11 +49,11 @@
 		C327D9D022D63FA70083537B /* AdjustKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustKeyboardView.swift; sourceTree = "<group>"; };
 		C327D9D222D644280083537B /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
 		C327D9D422D68D7B0083537B /* ReturnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnDelegate.swift; sourceTree = "<group>"; };
-		C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C39AE5EA22D3B25D0075C224 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C39AE5EC22D3B4480075C224 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C39AE5EE22D3DA560075C224 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C39AE5F022D3DD570075C224 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		C3A0A3CA22D759F7009D9258 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3A68B7222CFF2E9005F4F10 /* RoundedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		C3A68B7522CFF33D005F4F10 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C3A68B7722CFF526005F4F10 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				C3A6D47722CF7CA900854FED /* Main.storyboard */,
 				C3A6D47A22CF7CAB00854FED /* Assets.xcassets */,
 				C3A6D47C22CF7CAB00854FED /* LaunchScreen.storyboard */,
-				C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */,
+				C3A0A3CA22D759F7009D9258 /* GoogleService-Info.plist */,
 				C3A6D47F22CF7CAB00854FED /* Info.plist */,
 			);
 			path = SWAVE;
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3A6D47E22CF7CAB00854FED /* LaunchScreen.storyboard in Resources */,
-				C39AE5E822D3AF590075C224 /* GoogleService-Info.plist in Resources */,
+				C3A0A3CB22D759F8009D9258 /* GoogleService-Info.plist in Resources */,
 				C3A6D47B22CF7CAB00854FED /* Assets.xcassets in Resources */,
 				C3A6D47922CF7CA900854FED /* Main.storyboard in Resources */,
 			);
