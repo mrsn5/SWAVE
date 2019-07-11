@@ -16,6 +16,9 @@
 		C321FAD422D0AD24009DB05A /* NewFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD322D0AD24009DB05A /* NewFeedVC.swift */; };
 		C321FAD622D0AD38009DB05A /* FeedInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */; };
 		C321FAD822D0B204009DB05A /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C321FAD722D0B204009DB05A /* InputTextView.swift */; };
+		C327D9D122D63FA70083537B /* AdjustKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D022D63FA70083537B /* AdjustKeyboardView.swift */; };
+		C327D9D322D644280083537B /* KeyboardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D222D644280083537B /* KeyboardButton.swift */; };
+		C327D9D522D68D7B0083537B /* ReturnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327D9D422D68D7B0083537B /* ReturnDelegate.swift */; };
 		C39AE5E822D3AF590075C224 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */; };
 		C39AE5EB22D3B25D0075C224 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EA22D3B25D0075C224 /* AuthService.swift */; };
 		C39AE5ED22D3B4480075C224 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39AE5EC22D3B4480075C224 /* DataService.swift */; };
@@ -43,6 +46,9 @@
 		C321FAD322D0AD24009DB05A /* NewFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeedVC.swift; sourceTree = "<group>"; };
 		C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfoVC.swift; sourceTree = "<group>"; };
 		C321FAD722D0B204009DB05A /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
+		C327D9D022D63FA70083537B /* AdjustKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustKeyboardView.swift; sourceTree = "<group>"; };
+		C327D9D222D644280083537B /* KeyboardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardButton.swift; sourceTree = "<group>"; };
+		C327D9D422D68D7B0083537B /* ReturnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnDelegate.swift; sourceTree = "<group>"; };
 		C39AE5E722D3AF580075C224 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C39AE5EA22D3B25D0075C224 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C39AE5EC22D3B4480075C224 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -87,6 +93,40 @@
 				4449571BFAF3498AA3CF8C30 /* Pods_SWAVE.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C327D9CD22D63EE60083537B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C327D9CF22D63F2E0083537B /* Other */,
+				C327D9CE22D63EFF0083537B /* Delegates */,
+				C321FACB22D0ACB4009DB05A /* LoginVC.swift */,
+				C321FACD22D0ACC9009DB05A /* RegisterVC.swift */,
+				C321FACF22D0ACE7009DB05A /* FeedVC.swift */,
+				C321FAD122D0ACFB009DB05A /* ProfileVC.swift */,
+				C321FAD322D0AD24009DB05A /* NewFeedVC.swift */,
+				C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */,
+				C39AE5EE22D3DA560075C224 /* SettingsVC.swift */,
+				C39AE5F022D3DD570075C224 /* AuthVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C327D9CE22D63EFF0083537B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C327D9D422D68D7B0083537B /* ReturnDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		C327D9CF22D63F2E0083537B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				C327D9D022D63FA70083537B /* AdjustKeyboardView.swift */,
+				C327D9D222D644280083537B /* KeyboardButton.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		C39AE5E922D3B2330075C224 /* Services */ = {
@@ -164,14 +204,7 @@
 		C3A6D48922CF81CB00854FED /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C321FACB22D0ACB4009DB05A /* LoginVC.swift */,
-				C321FACD22D0ACC9009DB05A /* RegisterVC.swift */,
-				C321FACF22D0ACE7009DB05A /* FeedVC.swift */,
-				C321FAD122D0ACFB009DB05A /* ProfileVC.swift */,
-				C321FAD322D0AD24009DB05A /* NewFeedVC.swift */,
-				C321FAD522D0AD38009DB05A /* FeedInfoVC.swift */,
-				C39AE5EE22D3DA560075C224 /* SettingsVC.swift */,
-				C39AE5F022D3DD570075C224 /* AuthVC.swift */,
+				C327D9CD22D63EE60083537B /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +330,7 @@
 				C3A68B7622CFF33D005F4F10 /* Constants.swift in Sources */,
 				C321FACE22D0ACC9009DB05A /* RegisterVC.swift in Sources */,
 				C321FAD622D0AD38009DB05A /* FeedInfoVC.swift in Sources */,
+				C327D9D322D644280083537B /* KeyboardButton.swift in Sources */,
 				C39AE5EF22D3DA560075C224 /* SettingsVC.swift in Sources */,
 				C39AE5F122D3DD570075C224 /* AuthVC.swift in Sources */,
 				C3A6D48B22CF821D00854FED /* PaddedTextField.swift in Sources */,
@@ -305,7 +339,9 @@
 				C3A6D47422CF7CA900854FED /* AppDelegate.swift in Sources */,
 				C39AE5ED22D3B4480075C224 /* DataService.swift in Sources */,
 				C321FACA22D0A792009DB05A /* TopLabel.swift in Sources */,
+				C327D9D522D68D7B0083537B /* ReturnDelegate.swift in Sources */,
 				C321FAD422D0AD24009DB05A /* NewFeedVC.swift in Sources */,
+				C327D9D122D63FA70083537B /* AdjustKeyboardView.swift in Sources */,
 				C321FAD822D0B204009DB05A /* InputTextView.swift in Sources */,
 				C3A68B7822CFF526005F4F10 /* FeedCell.swift in Sources */,
 				C39AE5EB22D3B25D0075C224 /* AuthService.swift in Sources */,
