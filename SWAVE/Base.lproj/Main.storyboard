@@ -244,7 +244,7 @@
                                 <rect key="frame" x="0.0" y="110" width="375" height="619"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="96" id="lJG-gp-C1d">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="96" id="lJG-gp-C1d" customClass="FeedTCell" customModule="SWAVE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lJG-gp-C1d" id="GtR-tP-Zyb">
@@ -289,6 +289,11 @@
                                                 <constraint firstItem="FPC-kP-8pf" firstAttribute="leading" secondItem="wLy-jw-rst" secondAttribute="trailing" id="o7S-aV-s2C"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLbl" destination="nWT-6D-FO2" id="egp-mf-fJ5"/>
+                                            <outlet property="timeLbl" destination="FPC-kP-8pf" id="qwS-Sv-go0"/>
+                                            <outlet property="topicLbl" destination="wLy-jw-rst" id="Kws-3I-NpY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -307,6 +312,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="today_apps" id="ZnF-mG-0zG"/>
                     <connections>
+                        <outlet property="tableView" destination="uJL-c5-6B3" id="dgc-Jv-sKn"/>
                         <segue destination="UcC-i0-bpT" kind="show" identifier="FeedInfo" id="9iy-Nn-y7q"/>
                     </connections>
                 </viewController>

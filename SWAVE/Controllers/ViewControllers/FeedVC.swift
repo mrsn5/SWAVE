@@ -8,23 +8,28 @@
 
 import UIKit
 
-class FeedVC: UIViewController {
+class FeedVC: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    let dataSource = FeedDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = dataSource
+        tableView.delegate = self
+        
+        DataService.instanse.getAllFeedRecords { (feed, error) in
+            guard let feed = feed else {
+                debugPrint("Error while fetching feed data: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            
+            self.dataSource.feed = feed
+            self.tableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -43,4 +43,18 @@ class DataService {
         }
     }
     
+    func getAllFeedRecords(complete: @escaping ([Feed]?, Error?) -> ()) {
+        Firestore.firestore().collection("feed").order(by: "creation_time").addSnapshotListener({ (querySnapshot, err) in
+            if let err = err {
+                complete(nil, err)
+            } else {
+                var feed = [Feed]()
+                for document in querySnapshot!.documents {
+                    feed.append(Feed(id: document.documentID, data: document.data()))
+                }
+                complete(feed, nil)
+            }
+        })
+    }
+    
 }
