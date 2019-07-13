@@ -7,6 +7,7 @@ target 'SWAVE' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/Analytics'
 
   pod 'MessageKit'
   post_install do |installer|

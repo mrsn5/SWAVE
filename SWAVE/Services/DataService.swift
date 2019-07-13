@@ -44,7 +44,7 @@ class DataService {
     }
     
     func getAllFeedRecords(complete: @escaping ([Feed]?, Error?) -> ()) {
-        Firestore.firestore().collection("feed").order(by: "creation_time").addSnapshotListener({ (querySnapshot, err) in
+        Firestore.firestore().collection("feed").order(by: "creation_time").addSnapshotListener{ (querySnapshot, err) in
             if let err = err {
                 complete(nil, err)
             } else {
@@ -54,7 +54,18 @@ class DataService {
                 }
                 complete(feed, nil)
             }
-        })
+        }
     }
     
+    func getCurrentUserData(complete: @escaping (Dictionary<String, Any>?, Error?) -> () ) {
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        Firestore.firestore().collection("users").document(uid).addSnapshotListener { (querySnapshot, err) in
+            if let err = err {
+                complete(nil, err)
+            } else {
+                guard let userData = querySnapshot?.data() else {return}
+                complete(userData, nil)
+            }
+        }
+    }
 }

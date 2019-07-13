@@ -8,17 +8,20 @@
 
 import UIKit
 
-class FeedVC: UIViewController, UITableViewDelegate {
+class FeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     let dataSource = FeedDataSource()
+    var tableDelegate: FeedTVDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableDelegate = FeedTVDelegate(viewController: self)
+        
+        tableView.separatorStyle = .none
         tableView.dataSource = dataSource
-        tableView.delegate = self
+        tableView.delegate = tableDelegate
         
         DataService.instanse.getAllFeedRecords { (feed, error) in
             guard let feed = feed else {
@@ -31,5 +34,10 @@ class FeedVC: UIViewController, UITableViewDelegate {
         }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let feedInfoVC = segue.destination as? FeedInfoVC {
+            guard let feed = sender as? Feed else {return}
+            feedInfoVC.feed = feed
+        } 
+    }
 }

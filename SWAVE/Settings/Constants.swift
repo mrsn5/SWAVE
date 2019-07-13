@@ -15,6 +15,7 @@ enum USER_DATA: String {
     case EMAIL = "email"
     case PASSWORD = "password"
     case PROVIDER = "provider"
+    case USER_INFO = "user_info"
 }
 
 enum FEED_DATA: String {
@@ -23,3 +24,4 @@ enum FEED_DATA: String {
     case CREATION_TIME = "creation_time"
     case USER_ID = "user_id"
 }
+
